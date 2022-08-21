@@ -20,7 +20,7 @@ void inorder(TreeNode* root,int& ans,int& prev)
 {
     if(root)
     {
-        inorder(root->left,prev);
+        inorder(root->left,ans,prev);
         if(prev!=-1)
         ans = min(ans,root->val - prev);
         prev = root->val;
